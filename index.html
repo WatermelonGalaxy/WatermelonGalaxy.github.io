@@ -8,18 +8,92 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+/* Add a black background color to the top navigation */
+.topnav {
+   background-color: #333;
+   overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+   float: left;
+   display: block;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+   background-color: #ddd;
+   color: black;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+   background-color: #green;
+   color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+   display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+ .topnav a:not(:first-child) {display: none;}
+ .topnav a.icon {
+   float: right;
+   display: block;
+ }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+ .topnav.responsive {position: relative;}
+ .topnav.responsive a.icon {
+   position: absolute;
+   right: 0;
+   top: 0;
+ }
+ .topnav.responsive a {
+   float: none;
+   display: block;
+   text-align: left;
+ }
+}
 </style>
 
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
 
-<header class="w3-container w3-blue w3-center">
-<p>
-TAB|TAB|TAB
 
-</p>
+
+
+<header class="w3-center">
+  <div class="topnav" id="myTopnav">
+   <a href="#home" class="active">Home</a>
+   <a href="#news">News</a>
+   <a href="#projects">Projects</a>
+   <a href="#about">About</a>
+   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+ </div>
 </header>
 
 
-<body class="w3-light-grey">
+<body class="w3-grey">
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -80,7 +154,7 @@ TAB|TAB|TAB
           <br>
         </div>
         <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-orange"></i>Resume</b></p>
-        <a href="http://www.wmgalaxy.pw/Resume/Anthony%20McCann%20Resume%2010:30:2017.pdf">Download</a>
+        <a href="http://www.wmgalaxy.pw/Resume/Anthony%20McCann%20Resume%2010:30:2017.pdf">Click to open Resume PDF</a>
       </div><br>
     <!-- End Left Column -->
     </div>
@@ -89,7 +163,7 @@ TAB|TAB|TAB
     <div class="w3-twothird">
 
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-orange"></i>Work Experience</h2>
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-dark-grey"></i>Work Experience</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Advisor and Client Services / Penn Mutual Life Insurance</b></h5>
           <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>(Seasonal) 2016 - 2017 <span class="w3-tag w3-teal w3-round"></span></h6>
@@ -110,7 +184,7 @@ TAB|TAB|TAB
       </div>
 
       <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-orange"></i>Education</h2>
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-dark-gray"></i>Education</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Wentworth Institute of Technology</b></h5>
           <h6 class="w3-text-orange"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Enrolled: 2015 - 2019</h6>
@@ -133,7 +207,7 @@ TAB|TAB|TAB
   <!-- End Page Container -->
 </div>
 
-<footer class="w3-container w3-blue w3-center w3-margin-top">
+<footer class="w3-container w3-dark-gray w3-center w3-margin-top">
   <p>Find me on social media.</p>
   <i class="fa fa-facebook-official w3-hover-opacity"></i>
   <i class="fa fa-instagram w3-hover-opacity"></i>
