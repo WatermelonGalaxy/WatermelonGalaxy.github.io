@@ -1,45 +1,61 @@
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   background-color: black;
-  background-image: url("images/main-bg.jpeg");
-  background-size: cover;
-background-attachment: fixed;
+  background-image: url("images/main-bg4.jpg");
+  background-size: contain;
+  background-repeat:  repeat-x;
+  background-attachment: fixed;
+  align-items: center;
 
 }
 
+
 h1 {
-  margin-top: center;
-  margin-bottom: center;
-  font-family: Lucida Console;
-  font-size: 160px;
-  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
+  color: rgba(200,200,200);
 }
 
 
 h2 {
-  text-align: center;
-  font-family: Lucida Console;
-  font-size: 25px;
-  color: white;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: rgba(200,200,200);
+  margin-bottom: 0px;
 }
 
 
 textarea {
   font-size: 13px;
-  font-family: Lucida Console;
-  opacity: 80%;
+  font-family: 'Roboto', sans-serif;
+  opacity: 75%;
+
+}
+
+div.contain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%
 }
 
 div.about{
+  padding: 10px;
+  background-color: rgba(120,120,120,.1);
+  border: solid;
+  border-color: rgba(110,110,120);
+  border-width: 1px;
+  border-radius:0px;
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
+
+
 }
 
 div.logos {
  overflow: hidden;
- position: fixed;
- bottom: 0;
- width: 100%;
  opacity: 65%;
 
 }
@@ -50,6 +66,5 @@ div.logos img {
 }
 
 div.logos img:hover {
-  width: 70px;
-  height: 70px;
+  opacity: 50%;
 }
