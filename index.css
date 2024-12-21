@@ -13,7 +13,7 @@ html, body {
 
 
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
   font-size: 60px;
   color: rgba(200,200,200);
 }
@@ -21,7 +21,7 @@ h1 {
 
 h2 {
   text-align: left;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
   font-size: 20px;
   color: rgba(200,200,200);
   margin-bottom: 0px;
@@ -30,7 +30,8 @@ h2 {
 
 textarea {
   font-size: 13px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
+  border-radius: 10px;
   opacity: 75%;
 
 }
@@ -44,11 +45,11 @@ div.contain{
 
 div.about{
   padding: 10px;
-  background-color: rgba(120,120,120,.1);
+  background-color: rgba(120,120,120,.5);
   border: solid;
   border-color: rgba(110,110,120);
   border-width: 1px;
-  border-radius:0px;
+  border-radius:10px;
   text-align: center;
 
 
@@ -57,14 +58,16 @@ div.about{
 div.logos {
  overflow: hidden;
  opacity: 65%;
-
 }
 
 div.logos img {
   width: 50px;
   height: 50px;
+  border-radius: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 div.logos img:hover {
-  opacity: 50%;
+  opacity: 60%;
 }
